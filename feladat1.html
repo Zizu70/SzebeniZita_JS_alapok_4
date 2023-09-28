@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1feladat</title>
+   
+</head>
+<body>
+    <h3>Szöveg átalakító gépezet </h3>
+    <form id="textConverterForm">
+        <div>
+            <label for="szoveg">Kérem ide írjon: </label>
+            <input type="text" id="szoveg" required>
+        </div>
+        <br>
+        <div>
+            <label>Milyen méretre változtassunk: </label>
+            <input type="radio" id="toLower" name="atalakitas" value="lower">
+            <label for="toLower">Kisbetűssé</label>
+            <input type="radio" id="toUpper" name="atalakitas" value="upper">
+            <label for="toUpper">Nagybetűssé</label>
+        </div>
+        <br>
+        <button type="button" id="gomb">Átalakítás</button>
+    </form>
+
+    <script src="feladat1.js"></script>
+</body>
+</html>

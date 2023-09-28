@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>3feladat</title>
+    <style>
+    .backgound {
+        background-image: linear-gradient(to left, rgb(223, 159, 211), rgb(126, 203, 223));
+    }        
+    </style> 
+
+</head>
+<body class="backgound">
+	 <div class="container mt-5">
+     
+    <form action="uj3feladat3.html" method="POST" name="nevezesi_lap">      
+
+      <div class="form-group">
+        <h3>Nevezési lap - Budapest CACIB kutyakiállítás</h3>
+        <br>
+        <label for="nev">A kutya törzskönyvi neve:</label>
+          <input type="text" class="form-control" id="nev" name="nev" required>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label for="tsz">A kutya törzskönyvi száma/jele:</label>
+          <input type="text" class="form-control" id="tsz" name="tkv" required>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label for="szul">A kutya születési dátuma:</label>
+        <input type="date" id="szul" required name="szulDat" placeholder="Születési dátum"><br><br>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label for="fajta">A kutya fajtája: </label>
+          <select class="form-control" id="fajta" name="fajta" required>
+            <option value="">Válasszon fajtát</option>  
+            <option value="1">Airedale terrier</option>
+            <option value="2">Bull terrier</option>
+            <option value="3">Foxterrier drótszőrű</option>
+            <option value="4">Foxterrier simaszőrű</option>
+            <option value="5">Ír terrier</option>
+            <option value="6">Kerry blue terrier</option>
+            <option value="7">Skót terrier</option>
+            <option value="8">Wels terrier</option>
+            <option value="9">West highland white terrier</option>
+          </select>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label for="neme">A kutya neme:</label>
+          <select class="form-control" id="neme" name="neme" required>
+            <option value="">Válasszon fajtát</option>  
+            <option value="male">Hím</option>
+            <option value="female">Nőstény</option>
+          </select>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label>Nevezési osztály:</label><br>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating1" name="oszt" value="osztaly1">
+              <label class="form-check-label" for="rating1">Bébi (3-6 hó)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating2" name="oszt" value="osztaly2">
+              <label class="form-check-label" for="rating2">Kölyök (6-9 hó)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating3" name="oszt" value="osztaly3">
+              <label class="form-check-label" for="rating3">Fiatal (9-18 hó)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating4" name="oszt" value="osztaly4">
+              <label class="form-check-label" for="rating4">Növendék (15-24 hó)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating5" name="oszt" value="osztaly5">
+              <label class="form-check-label" for="rating5">Nyilt (15 hó -tól)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating6" name="oszt" value="osztaly6">
+              <label class="form-check-label" for="rating6">Champion (champion címmel)</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="rating7" name="oszt" value="osztaly7">
+              <label class="form-check-label" for="rating7">Veterán (7.évtől)</label>
+          </div>
+                  
+          
+      </div>
+      <br>
+
+      <div class="form-group">
+          <label for="name">Tulajdonos neve:</label>
+          <input type="text" class="form-control" id="name" name="tul" required>
+      </div>
+      <br>
+      
+      <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <br>
+            
+      <div class="form-group">
+          <label for="belepo">Igényelt belépők száma:</label>
+          <input type="number" class="form-control" id="belepo" name="belepo" required>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label>Kérjük értékelje a regisztrációs lap megjelenését 1-től 5-ig, ahol az 5 nagyon tetszik 1 egyáltalán nem tetszik:</label><br>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="rating1" name="velemeny" value="1">
+            <label class="form-check-label" for="rating1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="rating2" name="velemeny" value="2">
+            <label class="form-check-label" for="rating2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="rating3" name="velemeny" value="3">
+            <label class="form-check-label" for="rating3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="rating4" name="velemeny" value="4">
+            <label class="form-check-label" for="rating4">4</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="rating5" name="velemeny" value="5">
+            <label class="form-check-label" for="rating5">5</label>
+        </div>
+        <br>
+        <br>
+        </div>
+        <button type="submit" class="btn btn-primary">Küldés</button>
+      </form>
+    </div>
+
+    <script src="uj3feladat3.js"></script>
+	<!--
+    <script>
+    	const lista = [];
+
+		document.addEventListener("DOMContentLoaded", () => {
+    	const urlap = document.forms["nevezesi_lap"];
+    	urlap.addEventListener("submit", (event) => {
+        	event.preventDefault();
+       
+        	const nev = urlap["nev"].value;
+        	const tkv = urlap["tkv"].value; 
+            const szulDat = urlap["szulDat"].value;
+            const fajta = urlap["fajta"].value;
+            const neme = urlap["neme"].value;
+            const oszt = urlap["oszt"].value;
+            const tul = urlap["tul"].value;
+            const email = urlap["email"].value;
+            const belepo = urlap["belepo"].value;
+            const velemeny = urlap["velemeny"].value;
+        
+        	let igaz = true;
+	
+        	if (nev.length < 5 || nev.length > 30) {
+            alert("A törzskönyvi névnek 5 és 30 karakter között kell lennie!"); 
+            igaz = false; // vagy return
+            
+        	}
+        // kis, nagy , bontas, / szam
+          	var tkvRegex = /^[a-zA-Z]+\/[0-9]{4}$/; 
+          //var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  chates
+        	if (!tkvRegex.teszt(tkv)) {
+            alert("A törzskönyvi száma/jele minmum 7 karakter!");  
+            igaz = false; 
+            
+        	}
+   
+       		if (fajta.length == 0 ) {
+            alert("A kutya fajtája nincs kiválasztva!");  
+            igaz = false; 
+            
+        	}
+   
+      		if (neme.length == 0 ) {
+           	alert("A kutya neme nincs kiválasztva!");  
+            igaz = false; 
+            
+        	}
+    
+       		if (oszt.length == 0 ) {
+            alert("A nevezésiosztály nincs kiválasztva!");  
+            igaz = false; 
+            
+        	}
+      // kis, nagy , bontas, / kér tag min
+            if (tul.length < 5 || nev.length > 30) {
+            alert("A névnek 5 és 30 karakter között kell lennie!");  
+            igaz = false; 
+            
+        	}
+   // megnézni!!! . utáni nincs benne!!!!!! **** var vagy const???? var ((!email.match(emailRegex))???)
+        	const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; //Bencéjé
+            if (!email_regex.test(email)) {
+            alert("Az email cím nem megfelelő!");  
+            igaz = false; 
+            
+      //**************************         
+           //var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  chates
+            //if (!email.match(emailRegex)) {
+           
+      
+            //const jelszo_regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/;
+            //if (!jelszo_regex.test(jelszo))
+            
+            //const nev_regex = ?????????
+           
+        	}
+// jelszó kis nagy speciális
+
+/*
+            const jelszo_regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/;
+            if (!jelszo_regex.test(jelszo)) {
+                alert("A jelszónak tartalmaznia kell legalább egy: kisbetűt, nagybetűt, számot és speciális karaktert");
+                helyes = false;
+            }
+
+            if (jelszo !== jelszo_megerosit) {
+                alert("A jelszavaknak egyeznie kell")
+                helyes = false
+            }
+            
+*/
+            if (belepo.length == 0 ) {
+            alert("Az igényelt belépők száma nincs kiválasztva!");  
+            igaz = false; 
+            
+        	}
+            
+            if (velemeny.length == 0 ) {
+            alert("A vélemény mező nincs kiválasztva!");  
+            igaz = false; 
+            
+        	}
+   
+        	if (minden_ell) {
+            	const adatok = {
+                	nev: nev,
+                	tkv: tkv,
+                    szulDat : szulDat,
+                    fajta : fajta,
+                    neme : neme,
+                    oszt : oszt,
+                    tul : tul,
+                    email : email,
+                    belepo : belepo,
+                    rating : rating//,
+                                
+            	}//;
+            	lista.push(adatok);
+            	console.log(lista);
+        	}
+    	});
+	});
+
+    
+    </script> -->
+</body>
+</html>
