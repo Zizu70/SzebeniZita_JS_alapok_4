@@ -20,12 +20,9 @@ urlap.addEventListener("submit", (event) => {
 
     if (nev.length < 5 || nev.length > 30) {
         alert("A törzskönyvi névnek 5 és 30 karakter között kell lennie!"); 
-        igaz = false; // vagy return
+        igaz = false; 
     
     }
-// kis, nagy , bontas, / szam
-    
-  //var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  chates
    
     if (tkv.length < 5 || nev.length > 30) {
         alert("A törzskönyvi száma/jele minmum 7 karakter!");  
@@ -50,45 +47,19 @@ urlap.addEventListener("submit", (event) => {
         igaz = false; 
     
     }
-// kis, nagy , bontas, / kér tag min
+
     if (tul.length < 5 || nev.length > 30) {
         alert("A névnek 5 és 30 karakter között kell lennie!");  
         igaz = false; 
     
     }
-// megnézni!!! . utáni nincs benne!!!!!! **** var vagy const???? var ((!email.match(emailRegex))???)
     
-    const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; //Bencéjé
+    const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/; 
     if (!email_regex.test(email)) {
         alert("Az email cím nem megfelelő!");  
         igaz = false; 
     }
-//**************************         
-   //var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  chates
-    //if (!email.match(emailRegex)) {
-   
-
-    //const jelszo_regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/;
-    //if (!jelszo_regex.test(jelszo))
-    
-    //const nev_regex = ?????????
-   
-    
-// jelszó kis nagy speciális
-
-/*
-    const jelszo_regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/;
-    if (!jelszo_regex.test(jelszo)) {
-        alert("A jelszónak tartalmaznia kell legalább egy: kisbetűt, nagybetűt, számot és speciális karaktert");
-        helyes = false;
-    }
-
-    if (jelszo !== jelszo_megerosit) {
-        alert("A jelszavaknak egyeznie kell")
-        helyes = false
-    }
-    
-*/
+  
     if (belepo.length == 0 ) {
     alert("Az igényelt belépők száma nincs kiválasztva!");  
     igaz = false; 
@@ -112,9 +83,9 @@ urlap.addEventListener("submit", (event) => {
             tul : tul,
             email : email,
             belepo : belepo,
-            oszt : oszt//,
+            oszt : oszt
                         
-        }//;
+        };
         lista.push(adatok);
         console.log(lista);
     }
